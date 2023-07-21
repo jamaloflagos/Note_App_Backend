@@ -5,7 +5,7 @@ const { dbConnection } = require("./db")
 const cors = require("cors")
 const { userRouter } = require("./routes/userRouter")
 const { noteRouter } = require("./routes/noteRouter")
-const { initSocket } = require("./socket")
+// const { initSocket } = require("./socket")
 
 
 
@@ -15,7 +15,7 @@ const server = http.createServer(app)
 
  
 // Socket setup
-initSocket(server)
+// initSocket(server)
 
 // Middlewares
 app.use(express.json())
