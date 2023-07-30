@@ -18,9 +18,14 @@ const server = http.createServer(app)
 // Socket setup
 // initSocket(server)
 
+const corsOptions = {
+    origin: 'https://note-app-three-sage.vercel.app',
+    methods: ['GET', 'POST', 'PATCH', 'DELETE'], // Add the allowed HTTP methods for your frontend
+  };
+
 // Middlewares
 app.use(express.json())
-app.use(cors)
+app.use(cors(corsOptions))
 
 app.use("/user", userRouter)
 app.use("/note", noteRouter)
