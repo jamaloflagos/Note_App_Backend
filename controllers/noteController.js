@@ -1,10 +1,10 @@
 const mongoose = require('mongoose')
 const { noteModel } = require("../models/noteModel")
-const { initSocket } = require('../socket')
+// const { initSocket } = require('../socket')
 const {format} = require("date-fns")
 const objectId = mongoose.Types.ObjectId
 
-const io = initSocket()
+// const io = initSocket()
 const getAllNoteController = async(req, res) => {
     const user = req.user
     try {

@@ -7,11 +7,6 @@ const generateToken = (_id) => {
 }
 
 
-const generateRefreshToken = (_id) => {
-    return jwt.sign({_id}, process.env.REFRESH_SECRET, {expiresIn: "7d"})
-
-}
-
 const signupController = async (req, res) => {
     const {email, password, name} = req.body
     try {
